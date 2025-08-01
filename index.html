@@ -12,17 +12,24 @@
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">
-                    <i class="fas fa-solar-panel"></i>
-                    <span>Voltia Energy</span>
+                <div class="nav-logo" onclick="activateLogoGame()" title="¡Haz click en el logo!">
+                    <div class="logo-container">
+                        <div class="logo-shine"></div>
+                        <i class="fas fa-bolt"></i>
+                        <span>Voltia Energy</span>
+                    </div>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
                     <li><a href="#servicios" class="nav-link">Servicios</a></li>
                     <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
                     <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                    <li><button class="btn-simulador" onclick="toggleSimulador()">Simulador</button></li>
+                    <li><button class="btn-simulador" onclick="toggleSimulador()">
+                        <i class="fas fa-calculator"></i>
+                        Simulador
+                    </button></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -35,21 +42,127 @@
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Energía Solar para tu Futuro</h1>
-                <p>Especialistas en instalaciones fotovoltaicas y baterías para vehículos eléctricos. Transforma tu hogar en una fuente de energía limpia y sostenible.</p>
+                <div class="hero-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Líderes en Energía Renovable</span>
+                </div>
+                <h1>El Futuro de la Energía<br><span class="gradient-text">Está en tus Manos</span></h1>
+                <p class="hero-description">Transformamos tu hogar en una central de energía limpia y sostenible. Con más de 500 instalaciones exitosas, somos tu socio de confianza hacia la independencia energética.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Instalaciones</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Satisfacción</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25</span>
+                        <span class="stat-label">Años Garantía</span>
+                    </div>
+                </div>
                 <div class="hero-buttons">
                     <button class="btn-primary" onclick="toggleSimulador()">
                         <i class="fas fa-calculator"></i>
-                        Calcular Presupuesto
+                        <span>Calcular Mi Ahorro</span>
+                        <div class="btn-shine"></div>
                     </button>
-                    <a href="#contacto" class="btn-secondary">Contactar Ahora</a>
+                    <a href="#quienes-somos" class="btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Conocer Más
+                    </a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="solar-animation">
-                    <i class="fas fa-sun"></i>
+            <div class="hero-visual">
+                <div class="solar-system">
+                    <div class="sun-center">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="orbit orbit-1">
+                        <div class="planet"><i class="fas fa-home"></i></div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="planet"><i class="fas fa-car"></i></div>
+                    </div>
+                    <div class="orbit orbit-3">
+                        <div class="planet"><i class="fas fa-industry"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos Section -->
+    <section id="quienes-somos" class="quienes-somos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Nuestra Historia</span>
+                <h2>Voltia Energy: Pioneros en Energía Solar</h2>
+                <p class="section-subtitle">Desde 2010, lideramos la revolución energética en España</p>
+            </div>
+            <div class="quienes-content">
+                <div class="quienes-text">
+                    <div class="company-intro">
+                        <h3>Transformando el Futuro Energético</h3>
+                        <p>En <strong>Voltia Energy</strong>, no solo instalamos paneles solares; creamos soluciones energéticas integrales que transforman la manera en que nuestros clientes consumen y generan electricidad.</p>
+                        
+                        <div class="mission-vision">
+                            <div class="mission">
+                                <div class="icon-box">
+                                    <i class="fas fa-target"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Nuestra Misión</h4>
+                                    <p>Democratizar el acceso a la energía solar, haciendo que cada hogar y empresa pueda generar su propia electricidad limpia y reducir su huella de carbono.</p>
+                                </div>
+                            </div>
+                            <div class="vision">
+                                <div class="icon-box">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Nuestra Visión</h4>
+                                    <p>Ser la empresa líder en soluciones de energía renovable, contribuyendo a un futuro sostenible y energéticamente independiente para España.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quienes-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Certificaciones</h4>
+                        <p>Homologados por IDAE y certificados ISO 9001. Cumplimos con todos los estándares de calidad europeos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Equipo Experto</h4>
+                        <p>Ingenieros especializados con más de 15 años de experiencia en el sector de energías renovables.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Compromiso Total</h4>
+                        <p>Acompañamos a nuestros clientes desde el diseño hasta el mantenimiento, garantizando el máximo rendimiento.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Impacto Ambiental</h4>
+                        <p>Hemos evitado más de 2,500 toneladas de CO₂ con nuestras instalaciones. ¡Juntos cuidamos el planeta!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -320,15 +433,28 @@
 
             <!-- Formulario de contacto -->
             <div id="contacto-simulador" class="contacto-simulador" style="display: none;">
-                <h4>Solicitar Presupuesto Personalizado</h4>
+                <div class="presupuesto-header">
+                    <i class="fas fa-star"></i>
+                    <h4>¡Excelente! Ahora necesitamos conocerte</h4>
+                    <p>Nuestro equipo de expertos te preparará un presupuesto 100% personalizado y sin compromiso</p>
+                </div>
                 <form id="form-contacto-simulador">
                     <div class="form-row">
-                        <input type="text" id="nombre-sim" placeholder="Nombre" required>
+                        <input type="text" id="nombre-sim" placeholder="Nombre completo" required>
                         <input type="tel" id="telefono-sim" placeholder="Teléfono" required>
                     </div>
                     <input type="email" id="email-sim" placeholder="Email" required>
-                    <textarea id="mensaje-sim" placeholder="Mensaje adicional (opcional)" rows="3"></textarea>
-                    <button type="submit" class="btn-primary">Solicitar Presupuesto por WhatsApp</button>
+                    <input type="text" id="ciudad-sim" placeholder="Ciudad (opcional)">
+                    <textarea id="mensaje-sim" placeholder="¿Tienes alguna pregunta específica? (opcional)" rows="3"></textarea>
+                    <div class="privacy-notice">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Tus datos están seguros. Solo los usaremos para contactarte sobre tu presupuesto.</span>
+                    </div>
+                    <button type="submit" class="btn-primary btn-presupuesto">
+                        <i class="fas fa-whatsapp"></i>
+                        <span>Recibir Mi Presupuesto Personalizado</span>
+                        <div class="btn-shine"></div>
+                    </button>
                 </form>
             </div>
         </div>

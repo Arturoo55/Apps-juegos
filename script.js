@@ -319,6 +319,7 @@ function handleSimuladorSubmit(e) {
     const nombre = document.getElementById('nombre-sim').value;
     const telefono = document.getElementById('telefono-sim').value;
     const email = document.getElementById('email-sim').value;
+    const ciudad = document.getElementById('ciudad-sim').value;
     const mensaje = document.getElementById('mensaje-sim').value;
 
     // Guardar datos de contacto
@@ -326,11 +327,12 @@ function handleSimuladorSubmit(e) {
         nombre: nombre,
         telefono: telefono,
         email: email,
+        ciudad: ciudad,
         mensaje: mensaje
     };
 
     // Crear mensaje para WhatsApp
-    let whatsappMessage = `¡Hola! Soy ${nombre} y estoy interesado en una instalación fotovoltaica.\n\n`;
+    let whatsappMessage = `🌞 ¡Hola! Soy *${nombre}* y estoy muy interesado en una instalación fotovoltaica.\n\n`;
     
     // Agregar datos del simulador de energía si existe
     if (Object.keys(simuladorData.energia).length > 0) {
@@ -357,11 +359,15 @@ function handleSimuladorSubmit(e) {
     whatsappMessage += `• Teléfono: ${telefono}\n`;
     whatsappMessage += `• Email: ${email}\n`;
     
+    if (ciudad) {
+        whatsappMessage += `• Ciudad: ${ciudad}\n`;
+    }
+    
     if (mensaje) {
-        whatsappMessage += `• Mensaje: ${mensaje}\n`;
+        whatsappMessage += `• Consulta: ${mensaje}\n`;
     }
 
-    whatsappMessage += `\n¿Podrían enviarme un presupuesto personalizado? ¡Gracias!`;
+    whatsappMessage += `\n¡Me interesa recibir un presupuesto personalizado! ¿Cuándo podríamos hablar?`;
 
     // Número de teléfono de la empresa (cambiar por el número real)
     const phoneNumber = '34900123456'; // Cambiar por tu número de WhatsApp
@@ -585,6 +591,100 @@ function formatNumber(num) {
 // Función para detectar dispositivos móviles
 function isMobile() {
     return window.innerWidth <= 768;
+}
+
+// Juego del Logo
+function activateLogoGame() {
+    const logo = document.querySelector('.nav-logo');
+    logo.classList.add('game-active');
+    
+    // Crear partículas
+    createParticles(logo);
+    
+    // Sonido de éxito (opcional)
+    playSuccessSound();
+    
+    // Mostrar mensaje de felicitación
+    showNotification('¡Felicidades! Has encontrado el Easter Egg de Voltia Energy 🎉');
+    
+    // Remover la clase después de la animación
+    setTimeout(() => {
+        logo.classList.remove('game-active');
+    }, 1000);
+    
+    // Contador de clicks (opcional)
+    updateLogoClickCounter();
+}
+
+function createParticles(element) {
+    const rect = element.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    
+    const particleContainer = document.createElement('div');
+    particleContainer.className = 'logo-particles';
+    document.body.appendChild(particleContainer);
+    
+    // Crear múltiples partículas
+    for (let i = 0; i < 12; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = centerX + 'px';
+        particle.style.top = centerY + 'px';
+        
+        // Dirección aleatoria
+        const angle = (i * 30) * Math.PI / 180;
+        const velocity = 50 + Math.random() * 50;
+        
+        particle.style.setProperty('--dx', Math.cos(angle) * velocity + 'px');
+        particle.style.setProperty('--dy', Math.sin(angle) * velocity + 'px');
+        
+        particleContainer.appendChild(particle);
+    }
+    
+    // Limpiar partículas después de la animación
+    setTimeout(() => {
+        document.body.removeChild(particleContainer);
+    }, 1000);
+}
+
+function playSuccessSound() {
+    // Crear un sonido usando Web Audio API (opcional)
+    try {
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+        oscillator.frequency.setValueAtTime(1000, audioContext.currentTime + 0.1);
+        oscillator.frequency.setValueAtTime(1200, audioContext.currentTime + 0.2);
+        
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.3);
+    } catch (e) {
+        // Silencioso si no se puede reproducir audio
+    }
+}
+
+function updateLogoClickCounter() {
+    let clicks = localStorage.getItem('voltia-logo-clicks') || 0;
+    clicks = parseInt(clicks) + 1;
+    localStorage.setItem('voltia-logo-clicks', clicks);
+    
+    // Mensajes especiales según el número de clicks
+    if (clicks === 5) {
+        showNotification('🌟 ¡Eres un verdadero fan de Voltia Energy!');
+    } else if (clicks === 10) {
+        showNotification('⚡ ¡Increíble! Has clickeado el logo 10 veces. ¡Eres parte del equipo!');
+    } else if (clicks === 25) {
+        showNotification('🏆 ¡LEYENDA! 25 clicks en el logo. ¡Deberías trabajar con nosotros!');
+    }
 }
 
 // Optimización para dispositivos móviles

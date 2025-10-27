@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltia Energy - Instalaciones Fotovoltaicas y Baterías</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="activateLogoGame()" title="¡Haz click en el logo!">
+                    <div class="logo-container">
+                        <div class="logo-shine"></div>
+                        <i class="fas fa-bolt"></i>
+                        <span>Voltia Energy</span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#quienes-somos" class="nav-link">Quiénes Somos</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><button class="btn-simulador" onclick="toggleSimulador()">
+                        <i class="fas fa-calculator"></i>
+                        Simulador
+                    </button></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Líderes en Energía Renovable</span>
+                </div>
+                <h1>El Futuro de la Energía<br><span class="gradient-text">Está en tus Manos</span></h1>
+                <p class="hero-description">Transformamos tu hogar en una central de energía limpia y sostenible. Con más de 500 instalaciones exitosas, somos tu socio de confianza hacia la independencia energética.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Instalaciones</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Satisfacción</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25</span>
+                        <span class="stat-label">Años Garantía</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="toggleSimulador()">
+                        <i class="fas fa-calculator"></i>
+                        <span>Calcular Mi Ahorro</span>
+                        <div class="btn-shine"></div>
+                    </button>
+                    <a href="#quienes-somos" class="btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Conocer Más
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="solar-system">
+                    <div class="sun-center">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="orbit orbit-1">
+                        <div class="planet"><i class="fas fa-home"></i></div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="planet"><i class="fas fa-car"></i></div>
+                    </div>
+                    <div class="orbit orbit-3">
+                        <div class="planet"><i class="fas fa-industry"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos Section -->
+    <section id="quienes-somos" class="quienes-somos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Nuestra Historia</span>
+                <h2>Voltia Energy: Pioneros en Energía Solar</h2>
+                <p class="section-subtitle">Desde 2010, lideramos la revolución energética en España</p>
+            </div>
+            <div class="quienes-content">
+                <div class="quienes-text">
+                    <div class="company-intro">
+                        <h3>Transformando el Futuro Energético</h3>
+                        <p>En <strong>Voltia Energy</strong>, no solo instalamos paneles solares; creamos soluciones energéticas integrales que transforman la manera en que nuestros clientes consumen y generan electricidad.</p>
+                        
+                        <div class="mission-vision">
+                            <div class="mission">
+                                <div class="icon-box">
+                                    <i class="fas fa-target"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Nuestra Misión</h4>
+                                    <p>Democratizar el acceso a la energía solar, haciendo que cada hogar y empresa pueda generar su propia electricidad limpia y reducir su huella de carbono.</p>
+                                </div>
+                            </div>
+                            <div class="vision">
+                                <div class="icon-box">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>Nuestra Visión</h4>
+                                    <p>Ser la empresa líder en soluciones de energía renovable, contribuyendo a un futuro sostenible y energéticamente independiente para España.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quienes-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Certificaciones</h4>
+                        <p>Homologados por IDAE y certificados ISO 9001. Cumplimos con todos los estándares de calidad europeos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Equipo Experto</h4>
+                        <p>Ingenieros especializados con más de 15 años de experiencia en el sector de energías renovables.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Compromiso Total</h4>
+                        <p>Acompañamos a nuestros clientes desde el diseño hasta el mantenimiento, garantizando el máximo rendimiento.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Impacto Ambiental</h4>
+                        <p>Hemos evitado más de 2,500 toneladas de CO₂ con nuestras instalaciones. ¡Juntos cuidamos el planeta!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Instalaciones Fotovoltaicas</h3>
+                    <p>Diseño e instalación completa de sistemas solares residenciales y comerciales con la mejor tecnología del mercado.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <h3>Baterías para Vehículos</h3>
+                    <p>Instalación y mantenimiento de sistemas de carga para coches eléctricos, maximizando tu autonomía energética.</p>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Mantenimiento</h3>
+                    <p>Servicio técnico especializado para garantizar el óptimo rendimiento de tu instalación solar durante años.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="beneficios">
+        <div class="container">
+            <h2>¿Por qué elegir Energía Solar?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Ahorro Económico</h3>
+                    <p>Reduce tu factura eléctrica hasta un 90%. La inversión se amortiza en 5-7 años y generas ahorros durante más de 25 años.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Energía Limpia</h3>
+                    <p>Contribuye al medio ambiente reduciendo tu huella de carbono. Una instalación evita hasta 2 toneladas de CO₂ al año.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Valor de Propiedad</h3>
+                    <p>Incrementa el valor de tu vivienda hasta un 15%. Las casas con energía solar se venden más rápido y a mejor precio.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Independencia Energética</h3>
+                    <p>Genera tu propia electricidad y reduce la dependencia de la red eléctrica. Almacena energía para usar cuando la necesites.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Garantía Extendida</h3>
+                    <p>Paneles con garantía de 25 años y sistemas con 10 años de garantía. Tecnología probada y confiable.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="beneficio-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Subvenciones</h3>
+                    <p>Aprovecha las ayudas estatales y autonómicas. Hasta 1.500€ por kWp instalado en algunas comunidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="proyectos">
+        <div class="container">
+            <h2>Proyectos Realizados</h2>
+            <div class="proyectos-grid">
+                <div class="proyecto-card">
+                    <div class="proyecto-image">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Vivienda Unifamiliar</h3>
+                        <p>5.2 kWp - Madrid</p>
+                        <span class="proyecto-ahorro">Ahorro: 1.200€/año</span>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <div class="proyecto-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Edificio Comercial</h3>
+                        <p>15.8 kWp - Barcelona</p>
+                        <span class="proyecto-ahorro">Ahorro: 3.800€/año</span>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <div class="proyecto-image">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Nave Industrial</h3>
+                        <p>50.4 kWp - Valencia</p>
+                        <span class="proyecto-ahorro">Ahorro: 12.500€/año</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacta con Nosotros</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <div class="contacto-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+34 900 123 456</p>
+                        </div>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@voltiaenergy.com</p>
+                        </div>
+                    </div>
+                    <div class="contacto-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Calle Solar, 123<br>28001 Madrid</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacto-form">
+                    <form>
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Teléfono" required>
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-solar-panel"></i> Voltia Energy</h3>
+                    <p>Especialistas en energía solar y soluciones sostenibles para el futuro.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li>Instalaciones Fotovoltaicas</li>
+                        <li>Baterías para Vehículos</li>
+                        <li>Mantenimiento</li>
+                        <li>Consultoría Energética</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Voltia Energy. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simulador Flotante -->
+    <div id="simulador-modal" class="simulador-modal">
+        <div class="simulador-content">
+            <div class="simulador-header">
+                <h3>Simulador de Presupuesto</h3>
+                <button class="close-simulador" onclick="toggleSimulador()">&times;</button>
+            </div>
+            <div class="simulador-tabs">
+                <button class="tab-btn active" onclick="switchTab('energia')">Energía Solar</button>
+                <button class="tab-btn" onclick="switchTab('instalacion')">Instalación</button>
+            </div>
+            
+            <!-- Tab Energía -->
+            <div id="tab-energia" class="tab-content active">
+                <form id="form-energia">
+                    <div class="form-group">
+                        <label>Consumo mensual (kWh)</label>
+                        <input type="number" id="consumo" placeholder="300" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de vivienda</label>
+                        <select id="tipo-vivienda" required>
+                            <option value="">Seleccionar</option>
+                            <option value="unifamiliar">Unifamiliar</option>
+                            <option value="apartamento">Apartamento</option>
+                            <option value="comercial">Comercial</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Orientación del tejado</label>
+                        <select id="orientacion" required>
+                            <option value="">Seleccionar</option>
+                            <option value="sur">Sur</option>
+                            <option value="sureste">Sureste</option>
+                            <option value="suroeste">Suroeste</option>
+                            <option value="este">Este</option>
+                            <option value="oeste">Oeste</option>
+                        </select>
+                    </div>
+                    <div class="resultado-simulacion" id="resultado-energia"></div>
+                    <button type="button" onclick="calcularEnergia()" class="btn-calcular">Calcular</button>
+                </form>
+            </div>
+
+            <!-- Tab Instalación -->
+            <div id="tab-instalacion" class="tab-content">
+                <form id="form-instalacion">
+                    <div class="form-group">
+                        <label>Potencia deseada (kWp)</label>
+                        <input type="number" id="potencia" placeholder="5.2" step="0.1" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de instalación</label>
+                        <select id="tipo-instalacion" required>
+                            <option value="">Seleccionar</option>
+                            <option value="basica">Básica</option>
+                            <option value="premium">Premium</option>
+                            <option value="bateria">Con Batería</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Superficie disponible (m²)</label>
+                        <input type="number" id="superficie" placeholder="30" required>
+                    </div>
+                    <div class="resultado-simulacion" id="resultado-instalacion"></div>
+                    <button type="button" onclick="calcularInstalacion()" class="btn-calcular">Calcular</button>
+                </form>
+            </div>
+
+            <!-- Formulario de contacto -->
+            <div id="contacto-simulador" class="contacto-simulador" style="display: none;">
+                <div class="presupuesto-header">
+                    <i class="fas fa-star"></i>
+                    <h4>¡Excelente! Ahora necesitamos conocerte</h4>
+                    <p>Nuestro equipo de expertos te preparará un presupuesto 100% personalizado y sin compromiso</p>
+                </div>
+                <form id="form-contacto-simulador">
+                    <div class="form-row">
+                        <input type="text" id="nombre-sim" placeholder="Nombre completo" required>
+                        <input type="tel" id="telefono-sim" placeholder="Teléfono" required>
+                    </div>
+                    <input type="email" id="email-sim" placeholder="Email" required>
+                    <input type="text" id="ciudad-sim" placeholder="Ciudad (opcional)">
+                    <textarea id="mensaje-sim" placeholder="¿Tienes alguna pregunta específica? (opcional)" rows="3"></textarea>
+                    <div class="privacy-notice">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Tus datos están seguros. Solo los usaremos para contactarte sobre tu presupuesto.</span>
+                    </div>
+                    <button type="submit" class="btn-primary btn-presupuesto">
+                        <i class="fas fa-whatsapp"></i>
+                        <span>Recibir Mi Presupuesto Personalizado</span>
+                        <div class="btn-shine"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
